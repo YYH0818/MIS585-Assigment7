@@ -1,0 +1,291 @@
+
+/* colors variables */
+:root{
+   
+    --white: #ffffffff;
+    --wpired: rgb(158, 54, 59);
+    --wpiredlight: rgb(158, 54, 40);
+    --rich-black-fogra-29: #071013ff;
+    --rich-black: rgb(0, 0, 0);
+  
+    
+}
+
+/* Common */
+
+html { 
+    font-size: calc(1em + 1vw);
+    box-sizing: content-box;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    font-family: 'Brawler', serif;
+    background-color: var(--rich-black);
+}
+ 
+
+.bg-gold{
+    background-color: var(--wpired);
+}
+
+.text-gold{
+    color: var(--wpired);
+}
+
+.fs-21{
+    font-size: 16px;
+}
+
+p{
+    font-size: 13px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+/* buttons */
+button:focus{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+.btn-outline-light{border: 2px solid var(--wpiredlight);}
+
+.btn-outline-light:hover{border-color: var(--wpired); background-color: var(--wpired); color: var(--white);}
+
+/* Navbar */
+.logo{
+    width: 60%;
+}
+
+.navbar-nav{
+    font-size: 0.7em;  
+}
+
+.navbar-toggler{
+    border: none;
+}
+
+
+
+/* Home page Banner */
+
+.parallax-home {
+      background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8) ), url(../img/cafe-main-background.png);
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100%;
+      background-blend-mode: darken;
+}
+
+.cover-heading{
+    font-size: 34px ;
+    padding: 0.5em ;
+}
+
+[class*="fa-"] {color: var(--white); margin-right: 15px;}
+[class*="fa-"]:hover {color: var(--wpired);}
+
+
+/* Menu*/
+
+.parallax-menu {
+    background-color: var(--rich-black);
+    background-attachment: fixed;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    
+}
+
+.image-icon{
+    width: 20%;
+}
+.image-title{
+    width: 10%;
+}
+
+.list-group-item{
+    
+    font-size: 18px;
+    color: var(--white);
+    border: none;
+    font-weight: 100;
+    
+}
+
+.badge {
+    color: var(--white);
+    vertical-align: middle;
+    font-size: 18px;
+    background-color: var(--wpired);
+}
+
+
+/* Our Story */
+.parallax-ourstory{
+    background-color: var(--rich-black);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 90vw;
+    margin-bottom: -300px;
+}
+
+.box-transparent-black{
+    background-color: rgb(0, 0, 0, 0.6) ; 
+    border: solid 2px var(--wpired);
+    position: relative;
+    z-index: 2;
+    transform: translate(45%, -40px); 
+    
+}
+
+
+
+/* Product */
+
+.parallax-product {
+ 
+    background-blend-mode: saturation;
+    background-color: var(--rich-black);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70%;
+
+}
+
+/* Contact */
+
+.parallax-contact {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8) ), url(../img/contact-back.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+   
+}
+
+
+
+.label {
+    font-size: 14px;
+    margin-bottom: 10px;
+    }
+
+.custom-select{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 34px;
+    margin-bottom: 34px;
+    width: 100%;
+}
+
+
+
+
+/* Footer */
+
+.fs-13{
+    font-size: 13px;
+}
+
+.bg-footer{
+    background-color: var(--wpired);
+    margin: -20px;
+      
+    }
+
+
+footer p{
+   font-weight: 200;
+
+}
+
+
+
+.list-unstyled li i{
+    padding-left: 20px;
+    padding-right: 15px;
+}
+
+
+/*! Responsive */
+
+@media screen and (min-width: 320px) {
+    html {
+      font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+    }
+    .list-group-item{
+    
+        font-size: 16px;        
+    }
+    .badge{
+        font-size: 14px;
+    }
+  }
+  @media screen and (min-width: 1000px) {
+    
+
+    .list-group-item{
+    
+        font-size: 16px;        
+    }
+  }
+
+
+@media only screen and (max-width: 450px) {
+    
+    .logo{
+        width: 100%;
+        
+    }
+    .box-transparent-black{
+        width: 100%;
+        transform: translate(0px, 0px);
+       
+    }
+    .parallax-aboutus{
+        height: 100%;
+        margin: 0px;
+        
+    }
+
+    .image-title{
+        width: 40%;
+    }
+}
+
+/* TABLET VERSION  */
+@media only screen and (max-width: 991.98px) {
+    .box-transparent-black{
+        transform: translate(0px, 0px);
+        
+    }
+    .parallax-aboutus{
+        height: 100%;
+        margin-bottom: 0px;
+        
+    }
+    .image-title{
+        width: 40%;
+    }
+  }
+
+
+
+
+
+
+
+
+
